@@ -1,6 +1,6 @@
 import yaml
-
 from calendar_service import fetch_calendar_data, get_next_event
+from template_service import fill_template_with_event_data
 
 
 def read_config(config_path='config.yml'):
@@ -30,12 +30,7 @@ def main():
     next_event = get_next_event(calendar_data)
 
     if next_event:
-        print("Next Event:")
-        print(f"Summary: {next_event.name}")
-        print(f"Start: {next_event.begin}")
-        print(f"End: {next_event.end}")
-        print(f"Description: {next_event.description}")
-        print(f"Location: {next_event.location}")
+        fill_template_with_event_data(next_event)
     else:
         print("No upcoming events found.")
 

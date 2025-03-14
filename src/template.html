@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Events</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { color: #333; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>Upcoming Events</h1>
+    <table>
+        <tr>
+            <th>Summary</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Description</th>
+            <th>Location</th>
+        </tr>
+
+        <tr>
+            <td>{{ event.name }}</td>
+            <td>{{ event.begin }}</td>
+            <td>{{ event.end }}</td>
+            <td>{{ event.description }}</td>
+            <td>{{ event.location }}</td>
+        </tr>
+
+    </table>
+</body>
+</html>
